@@ -1,0 +1,11 @@
+div.catalogue-item-container
+  div.catalogue-item-content
+    div.row.catalogue-header
+      div.col-xs-8
+          p.catalogue-title {{product? product.name : ""}}
+      div.col-xs-4
+          p.catalogue-price ${{product? product.price : ""}}
+    div.catalogue-image([ngStyle]="product ? {'background-image': 'url(' + product.cover + ')'} : {}")
+    div.catalog-item-controls
+      button.btn.btn-default(*ngIf="!product.inList", "(click)"="addToList(index)") {{buttonText}}
+      button.btn.btn-default(*ngIf="product.inList", disabled="disabled") Game is in list

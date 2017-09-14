@@ -1,0 +1,5 @@
+div.game-catalogue
+  catalogue-item(*ngFor="let product of products; index as i", 
+                [product]="products[i]", 
+                [addToList]="addProductToList", 
+                [index]="i")

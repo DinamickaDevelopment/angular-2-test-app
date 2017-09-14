@@ -1,0 +1,9 @@
+div.container-fluid
+  div.row
+    div.col-xs-12
+      h1 Game List App
+    div.col-md-8.col-xs-12
+      game-catalogue([products]="products", [updateApp]="handleProductUpdate")
+    div.col-md-4.col-xs-12
+      game-list([products]="myProducts", [updateApp]="handleProductUpdate", [totalPrice]="totalPrice")
+      
